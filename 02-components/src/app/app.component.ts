@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { ProductService } from "./product.service";
+import { AdvertisementService } from "./advertisement.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  template: `
+    <h1>{{ title }}</h1>
+    <products></products>
+    <advertisements></advertisements>
+  `,
+  providers: [ProductService, AdvertisementService]
 })
 export class AppComponent {
-  title = 'aaa';
+  title: string = "Angular Projects in Class😎";
 }
