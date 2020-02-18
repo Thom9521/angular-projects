@@ -1,0 +1,14 @@
+What is the purpose of input & output properties?
+- Input & output properties can be defined to make a component re-usable
+
+Which kind of binding does each property type cover?
+-Properties marked as input or output will be visible from the outside and available for property or event binding. 
+For example, in our button element, we can bind its value property to a property in our component. 
+<button [value] = "title" (click)="onClick($event)">Submit</button>
+
+What is the @Input decorator used for? 
+- @Input decorator used for declaring an input property
+- @Output decorator used for declaring an output property
+
+What is the purpose of the styles property? 
+- With the styles property you can define CSS styles needed by your component
