@@ -1,0 +1,24 @@
+1. What is the purpose of the *ngIf directive? 
+- Like the normal conditional statement "if". It can be used to display a 
+block of text if something is living up to the condition.
+
+2. What is the purpose of the *ngIfElse directive?
+- It goes along with the *ngIf. It can display another block of a text if the 
+condition in *ngIf isn't true.
+
+3. What is the purpose of the *ngSwitch directive?
+- Works kinda like *ngIf, but the switch has some default conditional values where
+it will return default values. It gives a more clear look if the conditions and the values to return
+is always the same.
+
+4. What is the purpose of the ng-content directive? 
+- We can make components where we use the ng-content to display a chosen text with the
+content values from the component. It can work with bootstrap classes or normal css, that
+is only defined in that component.
+
+5. What is the purpose of the pipes? 
+- We use pipes to translate a value into another value. 
+
+6. How can you make your own pipes?
+- Make a pipe file like replace.pipe.ts that in this example takes the replace() and
+using it in the chosen components html. 
