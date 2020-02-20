@@ -1,6 +1,6 @@
 1. What is the purpose of the *ngIf directive? 
-- Like the normal conditional statement "if". It can be used to display a 
-block of text if something is living up to the condition.
+- Like the normal conditional statement "if" it is a build in directive. 
+It can be used to display a block of text if something is living up to the condition.
 
 2. What is the purpose of the *ngIfElse directive?
 - It goes along with the *ngIf. It can display another block of a text if the 
