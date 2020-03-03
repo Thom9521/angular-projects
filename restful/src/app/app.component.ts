@@ -21,18 +21,23 @@ import { FormControl } from "@angular/forms";
   ],
   template: `
     <h2>Ratings</h2>
+    <div>Base: {{ dataBase }}</div>
+    <div>Date: {{ dataDate }}</div>
+    <br />
     <div>SEK: {{ ratings.SEK }}</div>
     <div>CAD: {{ ratings.CAD }}</div>
     <div>HKD: {{ ratings.HKD }}</div>
     <div>ISK: {{ ratings.ISK }}</div>
+    <div>DKK: {{ ratings.DKK }}</div>
   `,
   providers: [GitHubService]
 })
 export class AppComponent {
   searchControl = new FormControl();
   isLoading = false;
-  // dataBase: string;
-  ratings = [];
+  dataBase: string;
+  dataDate: string;
+  ratings: any[];
   constructor(private _githubService: GitHubService) {}
 
   ngOnInit() {
@@ -40,6 +45,8 @@ export class AppComponent {
     this._githubService.getGitHubData().subscribe(data => {
       this.isLoading = false;
       this.ratings = data.rates;
+      this.dataBase = data.base;
+      this.dataDate = data.date;
       console.log(data.rates);
     });
   }

@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 export interface GitHubUser {
   base: string;
   date: string;
-  rates: any;
+  rates: number[];
 }
 
 @Injectable()

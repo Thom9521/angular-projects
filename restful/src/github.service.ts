@@ -5,15 +5,7 @@ import { Injectable } from "@angular/core";
 export interface GitHubUser {
   base: string;
   date: string;
-  rates: {
-    CAD: number;
-    CHF: number;
-    GBP: number;
-    SEK: number;
-    EUR: number;
-    USD: number;
-  };
-  items: any;
+  rates: any[];
 }
 
 @Injectable()
