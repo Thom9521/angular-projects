@@ -1,0 +1,52 @@
+1. Define what a SPA is (”SPA with routing - chapter 10.pptx”, slide 2)
+- A single page application is a web app that only is represented by one html page. The web app 
+then switch the content with different components, so that the web app don't need to refresh the
+whole page every time a new route is accessed. 
+
+2. Give an introduction to the Angular Router (“SPA with routing - chapter 10.pptx”, slide 3)
+- The Angular Router provides screen navigation in the SPA. By accessing different routes
+the content will be changed.
+
+3. What is the first step to enable routing? (“SPA with routing - chapter 10.pptx”, slide 4)
+- Set the base url in index.html.
+
+4. Explain, how the RouterModule works (“SPA with routing - chapter 10.pptx”, slide 5)
+- Routes are defined in a seperate file app.routing.ts where we import Routes and RouterModule.
+The RouterModule has a method forRoot, which takes an array of Route definiton objects.
+Each route definiton consist of a path and a component. The route definitions are stored in a 
+constant named routing.
+
+5. What is the purpose of <router-outlet></router-outlet>? (“SPA with routing - chapter 10.pptx”,
+slide 8)
+- We use router-outlet in app.component.ts. It specify where we want Angular to render requested component.
+
+6. What is the difference between using href and routerLink? (“SPA with routing - chapter 10.pptx”,
+slide 8)
+- href will refresh the whole page where routerLink changes what is requested.
+
+7. Which method is used to get the route parameters? (“SPA with routing - chapter 10.pptx”, slide 10)
+- ActivatedRoute is imported - this is needed to get access to the route parameters 
+The ngOnInit method is implemented. By subscribing to the route’s params method we can get the route
+parameters.
+8. What does _route.params return? (“SPA with routing - chapter 10.pptx”, slide 10)
+- An observable
+
+9. What is the purpose of the ngDestroy method? (“SPA with routing - chapter 10.pptx”, slide 10)
+- The ngDestroy method is implemented - when the component is destroyed, then 
+the subscription will also be removed from memory. The subscription is removed using the method unsubscribe.
+
+10. Define imperative navigation and explain, how this is used (“SPA with routing - chapter 10.pptx”,
+slide 11)
+- If we want to redirect to another page (e.g. after a successful login), we can’t use the
+routerLink directive. Instead we need to talk directly to the router object - this is called imperative
+navigation
+
+11. Give an introduction to route guards (“SPA with routing - chapter 10.pptx”, slide 12)
+- In a SPA we need to protect routes against unauthorized access. Angular’s router provides Route Guards
+to solve this problem. 
+We can use two interfaces to protect our routes: CanActivate & CanDeactivate. 
+We use CanActivate to control, if a user is allowed to navigate to a path. 
+We use CanDeactivate to check, if a user really wants to navigate away from a given page/path
+
+12. Give an introduction to route guards (“SPA with routing - chapter 10.pptx”, slide 12)
+- Questing 11
