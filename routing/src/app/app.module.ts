@@ -1,21 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms';
+import { AppComponent } from "./app.component";
+import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { HomeComponent } from './home.component';
-import { NotFoundComponent } from './notfound.component';
-import { GitHubComponent } from './github.component';
+import { HomeComponent } from "./home.component";
+import { NotFoundComponent } from "./notfound.component";
+import { GitHubComponent } from "./github.component";
+import { MaterialModule } from "./material/material.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { routing } from './app.routing';
+import { routing } from "./app.routing";
 
-import { GitHubUserComponent } from './githubuser.component';
-import { LoginService } from './login.service';
-import { AuthGuard } from './auth-guard.service';
-import { LoginComponent } from './login.component';
-import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.service';
+import { GitHubUserComponent } from "./githubuser.component";
+import { LoginService } from "./login.service";
+import { AuthGuard } from "./auth-guard.service";
+import { LoginComponent } from "./login.component";
+import { PreventUnsavedChangesGuard } from "./prevent-unsaved-changes-guard.service";
 
 @NgModule({
   declarations: [
@@ -30,13 +32,11 @@ import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.serv
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    routing    
+    routing,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
-  providers: [
-    LoginService,
-    AuthGuard,
-    PreventUnsavedChangesGuard
-  ],
+  providers: [LoginService, AuthGuard, PreventUnsavedChangesGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
