@@ -1,0 +1,30 @@
+<div>
+  <h1>Corona Statistics</h1>
+  <table class="table">
+    <th>Country</th>
+    <th>Total cases</th>
+    <th>Active cases</th>
+    <th>Cases today</th>
+    <th>Total deaths</th>
+    <th>Deaths today</th>
+    <th>Total recovered</th>
+    <th>Additional statistics</th>
+    <tr *ngFor="let country of countries">
+      <td>
+        {{ country.name }}
+        <span>({{ country.code }})</span>
+      </td>
+      <td>{{ country.latest_data.confirmed }}</td>
+      <td>
+        {{ country.latest_data.confirmed - country.latest_data.recovered }}
+      </td>
+      <td>{{ country.today.confirmed }}</td>
+      <td>{{ country.latest_data.deaths }}</td>
+      <td>{{ country.today.deaths }}</td>
+      <td>{{ country.latest_data.recovered }}</td>
+      <td>
+        <Button (click)="getCountry(country.code)">View more stats</Button>
+      </td>
+    </tr>
+  </table>
+</div>
