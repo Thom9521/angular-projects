@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Updated at: {{data.updated_at}}</p>
+  <p>Recovery rate: {{data.latest_data.calculated.recovery_rate}}</p>
+  <p>Death rate: {{data.latest_data.calculated.death_rate}}</p>
+  <p>
+    Cases per million population:
+    {{data.latest_data.calculated.cases_per_million_population}}
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+</div>
