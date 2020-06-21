@@ -34,6 +34,9 @@ export class LoginComponent {
       this.form.controls["password"].setErrors({
         invalidLogin: true,
       });
+      console.log("Wrong");
+    } else {
+      console.log("Welcome " + this.form.controls["username"].value);
     }
   }
 }
