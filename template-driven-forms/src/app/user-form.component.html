@@ -13,7 +13,7 @@
         #firstName="ngModel"
         minlength="3"
       />
-      <!-- display validation error test-->
+      <!-- display validation error-->
       <div *ngIf="firstName.touched && firstName.errors">
         <div class="alert alert-danger" *ngIf="firstName.errors.required">
           First name is required
